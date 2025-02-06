@@ -21,8 +21,6 @@ let gameDifficulty;
 let themeChoix
 document.getElementById("theme").addEventListener("change", choixDuTheme);
 
-
-
 //bird
 let birdWidth = 34;
 let birdHeight = 24;
