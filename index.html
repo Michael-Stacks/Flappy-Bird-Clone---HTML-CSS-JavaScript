@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/flappybird.css">
+    <script src="js/flappybird.js" defer></script>
+    <style>
+        body {
+            font-family:'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        #board {
+            border: 5px solid black;
+        }
+
+        #menu select, #menu button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class= "menu" id="menu">
+    <div>
+        <h1> FLAPPY-BIRD</h1>
+        <select id="difficulty">
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+        </select>
+        <button id="buttonStart" onclick="startGame()">Démarrer le jeu</button>
+        <button id="buttonLeaderboard" onclick="displayLeaderboard()">Voir le classement</button> <!-- Nouveau bouton -->
+        <button id="buttonOption" class="option-button" onclick="displayOption()"></button>
+    </div>
+</div>
+
+<canvas id="board" style="display:none;"></canvas>
+
+<div id="optionMenu" class="page-option" style="display:none">
+    <h2>Options</h2>
+    <select class="buttonOption-SelectionOption" id="theme">
+        <option value="themeNormal" onselect="choixDuTheme()" >Normal</option>
+        <option value="themeRouge" onselect="choixDuTheme()">Rouge</option>
+        <option value="themeMauve" onselect="choixDuTheme()">Mauve</option>
+        <option value="themeNoirEtBlanc" onselect="choixDuTheme()">Noir & Blanc</option>
+    </select>
+    <button class="buttonOption-SelectionOption" onclick="optionToMenu()">Retour au menu</button>
+</div>
+
+<div id="leaderboard" style="display:none;">
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard-list"></ol>
+    <button onclick="restartGame()">Rejouer</button>
+    <button onclick="returnToMenu()">Retour au menu</button> <!-- Nouveau bouton -->
+</div>
+<button id="mute-button">🔊</button>
+
+
+</body>
+</html>

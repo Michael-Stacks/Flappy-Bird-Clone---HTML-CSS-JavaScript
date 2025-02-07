@@ -1,0 +1,193 @@
+/* Corps de la page */
+/* Style global du body */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB; /* Bleu clair pour un fond agréable */
+    color: white; /* Texte blanc pour le contraste */
+}
+
+/* Canvas du jeu */
+#board {
+    filter: grayscale(0%); /* Pour changer le theme en noir et blanc*/
+    background-image: url("/png/flabbyBirdMovingBackGround.gif");
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre pour le canvas */
+    position: absolute;
+}
+
+/* Menu principal */
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+    width: 360px;
+    background-image: url("/png/flabbyBirdMovingBackGround.gif");
+    filter: grayscale(0%); /* Pour changer le theme en noir et blanc*/
+    background-size: cover;
+    border: 5px solid black;
+
+}
+
+#menu h1 {
+    margin: 0;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+/* Styles communs pour les éléments de sélection et les boutons dans le menu */
+#menu select,
+#menu button {
+
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur au survol pour les boutons et les éléments select dans le menu */
+#menu button:hover,
+#menu select:hover {
+    background-color: #45a049; /* Couleur plus sombre au survol */
+}
+
+#menu button, #menu select {
+    display: inline-block;
+    margin: 10px 5px;
+    vertical-align: middle;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+    width: 360px;
+}
+
+/* Leaderboard */
+#leaderboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Fond semi-transparent plus sombre */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    text-align: center;
+    z-index: 10; /* Assurez-vous qu'il est toujours visible */
+    filter: grayscale(0%); /* Pour changer le theme en noir et blanc*/
+
+}
+
+#leaderboard h2 {
+    margin: 0;
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+#leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+#leaderboard-list li {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+/* Boutons universels */
+button {
+    font-size: 18px;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+
+}
+
+/* Bouton option */
+.option-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url("/png/settingIcon.jpg") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 5px;       /* positionnnement en haut */
+    right: 5px;     /*possitionnement a droite */
+}
+
+/* Effet au survol pour les boutons universels */
+button:hover {
+    background-color: #45a049; /* Couleur plus sombre au survol */
+}
+
+.page-option{
+    filter: grayscale(0%); /* Pour changer le theme en noir et blanc*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(190, 220, 143);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.buttonOption-SelectionOption{
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;}
+
+#mute-button{
+    z-index: 1;
+    position: relative;
+    left:240px
+}
